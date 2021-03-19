@@ -1,0 +1,13 @@
+$designWidth:750;
+@function px($px){
+	@return $px*320/$designWidth/20 + rem;
+}
+@mixin pr($px){
+    font-size: $px;
+    [data-dpr="2"] & {
+       font-size: $px*2; 
+    };
+    [data-dpr="3"] & {
+       font-size: $px*3; 
+    };
+}
